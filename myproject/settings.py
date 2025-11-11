@@ -42,8 +42,10 @@ MIDDLEWARE = [
 ]
 
 # ✅ CORS setup (allows frontend)
+FRONTEND_URL = env("FRONTEND_URL", default="http://localhost:3000")
+
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:3000",  # local frontend
+    FRONTEND_URL,
 ]
 CORS_ALLOW_CREDENTIALS = True
 
