@@ -122,7 +122,7 @@ EMAIL_USE_TLS = True
 EMAIL_HOST_USER = os.getenv("EMAIL_HOST_USER", "your_email@gmail.com")
 EMAIL_HOST_PASSWORD = os.getenv("EMAIL_HOST_PASSWORD", "your_app_password")
 DEFAULT_FROM_EMAIL = "no-reply@example.com"
-FRONTEND_URL = "http://localhost:3000"
+
 
 # ✅ RapidAPI key
 RAPIDAPI_KEY = env("RAPIDAPI_KEY")
