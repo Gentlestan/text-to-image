@@ -129,9 +129,15 @@ RAPIDAPI_KEY = env("RAPIDAPI_KEY")
 
 # ✅ Render / production tweaks
 if not DEBUG:
-    # Security settings for production
-    CSRF_TRUSTED_ORIGINS = ["https://*.onrender.com"]
-    CORS_ALLOWED_ORIGINS += ["https://yourapp.onrender.com"]
+    # ✅ Real frontend and backend URLs
+    CSRF_TRUSTED_ORIGINS = [
+        "https://text-to-image-kzkg.onrender.com",              # backend
+        "https://text-to-image-front-lemon.vercel.app",         # frontend
+    ]
+    
+   
+
+    # ✅ Security headers for production
     SECURE_BROWSER_XSS_FILTER = True
     SECURE_CONTENT_TYPE_NOSNIFF = True
     SESSION_COOKIE_SECURE = True
